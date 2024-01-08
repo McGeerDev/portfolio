@@ -1,7 +1,4 @@
-<script lang="ts">
-  import svelteLogo from './assets/svelte.svg'
-  import Counter from './lib/Counter.svelte'
-</script>
+<script lang="ts"></script>
 
 <main>
 	<h1>Hi, I am Devan McGeer</h1>
