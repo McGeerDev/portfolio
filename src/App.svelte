@@ -1,4 +1,4 @@
-<script lang="ts"></script>
+<script></script>
 
 <main>
 	<h1>Hi, I am Devan McGeer</h1>
