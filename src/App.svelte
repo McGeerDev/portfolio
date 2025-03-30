@@ -24,6 +24,7 @@
 	</div>
 	<div class="flex ju">
 		<h1>Hi, I am Devan McGeer</h1>
+		<h1>An SRE</h1>
 	</div>
 
 </main>
