@@ -1,10 +1,8 @@
 <script lang="ts">
-    import Header from "$lib/components/Header.svelte";
-
 </script>
 
 <main>
-	<Header/>
+	<h1> I am Devan</h1>
 </main>
 
 <style>

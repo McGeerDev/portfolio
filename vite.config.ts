@@ -7,9 +7,4 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   base: "/",
   plugins: [svelte(),tailwindcss()],
-  resolve: {
-    alias: {
-      $lib: path.resolve("./src/lib")
-    }
-  }
 })
