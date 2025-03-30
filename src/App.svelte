@@ -2,7 +2,7 @@
 </script>
 
 <main>
-	<h1> I am Devan</h1>
+	<h1> I am Piet</h1>
 </main>
 
 <style>
