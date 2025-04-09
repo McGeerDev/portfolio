@@ -5,3 +5,8 @@
 @import '@skeletonlabs/skeleton/themes/cerberus';
 
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
+
+html,
+body {
+  @apply h-full;
+}
