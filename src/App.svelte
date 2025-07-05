@@ -7,7 +7,7 @@
 	import IconVideo from '@lucide/svelte/icons/video';
   
 	// State
-	let value = $state('files');
+	let value = ''
 </script>
   
 <div class="h-screen grid grid-rows-[auto-1fr-auto]">
