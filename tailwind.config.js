@@ -53,10 +53,12 @@ const config = {
 				sm: "calc(var(--radius) - 4px)"
 			},
 			fontFamily: {
-				sans: ["Inter", "sans-serif"] // Added Inter as a default sans-serif font
+				sans: ["Inter", "sans-serif"], // Added Inter as a default sans-serif font
+				'lexend-zetta': ['"Lexen Zetta"', 'sans-serif'],
+				lekton: ['"Lekton"', 'sans-serif']
 			}
 		}
 	},
 };
 
-export default config;
+
