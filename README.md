@@ -1,3 +1,6 @@
+
+[![CI](https://github.com/McGeerDev/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/McGeerDev/portfolio/actions/workflows/ci.yml)
+
 # mcgeer.dev &mdash; Devan McGeer Portfolio
 
 Welcome to the source code for my personal portfolio and blog, [mcgeer.dev](https://mcgeer.dev/).  
