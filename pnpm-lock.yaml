@@ -68,6 +68,9 @@ importers:
       svelte-check:
         specifier: ^4.0.0
         version: 4.2.2(picomatch@4.0.2)(svelte@5.35.4)(typescript@5.8.3)
+      tailwind-merge:
+        specifier: ^3.3.1
+        version: 3.3.1
       tailwindcss:
         specifier: ^4.0.0
         version: 4.1.11
@@ -1480,6 +1483,9 @@ packages:
     resolution: {integrity: sha512-NUUD+GcV/uvLBANoFwPNtnlkJM77PEkYYH6TChRZnGI1a5UHc9k2Glq7jxGtClfVz2ZhEvpg+c4yS577qM1c6g==}
     engines: {node: '>=18'}
 
+  tailwind-merge@3.3.1:
+    resolution: {integrity: sha512-gBXpgUm/3rp1lMZZrM/w7D8GKqshif0zAymAhbCyIt8KMe+0v9DQ7cdYLR4FHH/cKpdTXb+A/tKKU3eolfsI+g==}
+
   tailwindcss@4.1.11:
     resolution: {integrity: sha512-2E9TBm6MDD/xKYe+dvJZAmg3yxIEDNRc0jwlNyDg/4Fil2QcSLjFKGVff0lAf1jjeaArlG/M75Ey/EYr/OJtBA==}
 
@@ -2862,6 +2868,8 @@ snapshots:
       locate-character: 3.0.0
       magic-string: 0.30.17
       zimmerframe: 1.1.2
+
+  tailwind-merge@3.3.1: {}
 
   tailwindcss@4.1.11: {}
 
