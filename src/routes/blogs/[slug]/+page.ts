@@ -8,7 +8,7 @@ export const load: PageLoad = async ({ params }) => {
 			content: blogData.default,
 			metadata: blogData.metadata
 		};
-	} catch (e) {
+	} catch {
 		error(404, `Page not found: ${params.slug}`);
 	}
 };
