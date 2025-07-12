@@ -12,8 +12,7 @@
 
 <div class="py-16 sm:py-24">
   <!-- About and Tools Section -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-    <!-- About Me -->
+  <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
     <div>
       <h2 class="text-xl font-bold tracking-widest mb-4">ABOUT ME</h2>
       <p class="text-base leading-relaxed text-gray-800">
@@ -21,7 +20,6 @@
       </p>
     </div>
 
-    <!-- My Tools -->
     <div>
       <h2 class="text-xl font-bold tracking-widest mb-4">MY TOOLS</h2>
       <div class="flex flex-wrap gap-3">
@@ -32,5 +30,5 @@
         <span class="border border-black px-4 py-1 text-sm tracking-wider">Docker</span>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>
