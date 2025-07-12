@@ -1,3 +1,1 @@
-<div>
-	WRONG PAGE BUDDY
-</div>
+<div>WRONG PAGE BUDDY</div>
