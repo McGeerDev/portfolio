@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { PageProps } from './$types';
 	let { data }: PageProps = $props();
-	console.log({ data });
 </script>
 
 <div class="py-16 text-center sm:py-24">
