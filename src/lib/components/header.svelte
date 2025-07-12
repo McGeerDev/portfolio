@@ -5,7 +5,8 @@
 
 	<nav class="hidden items-center space-x-8 md:flex">
 		<a href="/" class="tracking-widest hover:text-gray-600">HOME</a>
-		<a href="/blog" class="tracking-widest hover:text-gray-600">BLOG</a>
+		<a href="/blogs" class="tracking-widest hover:text-gray-600">BLOG</a>
+		<a href="/blogs/hello" class="tracking-widest hover:text-gray-600">BLOG</a>
 	</nav>
 
 	<div class="flex items-center space-x-4">
