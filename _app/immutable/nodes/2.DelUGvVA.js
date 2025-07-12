@@ -1,1 +1,0 @@
-import"../chunks/CWj6FrbW.js";import"../chunks/C_-mSP2a.js";import{h as i,i as t}from"../chunks/C3CCE6n8.js";var m=i("<div>WRONG PAGE BUDDY</div>");function v(o){var r=m();t(o,r)}export{v as component};
