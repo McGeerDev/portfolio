@@ -8,4 +8,5 @@
 	<p class="mt-6 text-lg tracking-[0.3em] text-gray-700 sm:text-xl sm:tracking-[0.4em] md:text-2xl">
 		SITE RELIABILITY ENGINEER
 	</p>
+	<a href="/blogs/first" class="tracking-widest hover:text-gray-600">FIRST</a>
 </div>

@@ -19,7 +19,6 @@
 </script>
 
 <div class="min-h-screen bg-gray-50 font-sans text-gray-800">
-	<!-- Header & Introduction -->
 	<header class="sticky top-0 z-10 bg-white shadow-sm">
 		<div class="container mx-auto flex items-center justify-between px-6 py-4">
 			<h1 class="text-2xl font-bold text-gray-900">Devan McGeer</h1>
@@ -38,7 +37,6 @@
 	</header>
 
 	<main class="container mx-auto px-6 py-12 md:py-20">
-		<!-- Hero Section -->
 		<section id="hero" class="mb-20 text-center">
 			<h2 class="mb-4 text-4xl leading-tight font-extrabold text-gray-900 md:text-6xl">
 				Site Reliability Engineer
@@ -49,7 +47,6 @@
 			</p>
 		</section>
 
-		<!-- About Me Section -->
 		<section id="about" class="mb-20 scroll-mt-20">
 			<div class="rounded-xl border border-gray-200 bg-white p-8 shadow-md">
 				<h3 class="mb-4 text-3xl font-bold text-gray-900">About Me</h3>
@@ -63,7 +60,6 @@
 			</div>
 		</section>
 
-		<!-- Projects Section -->
 		<section id="projects" class="mb-20 scroll-mt-20">
 			<h3 class="mb-8 text-center text-3xl font-bold text-gray-900">My Projects</h3>
 			<div class="grid grid-cols-1 gap-8 md:grid-cols-1">
