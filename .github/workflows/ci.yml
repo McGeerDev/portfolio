@@ -42,5 +42,4 @@ jobs:
           cache: pnpm
       - run: pnpm install
       - run: pnpm run lint
-      - run: pnpm add -D autoprefixer
       - run: pnpm run check
