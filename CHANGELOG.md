@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/McGeerDev/portfolio/compare/v1.0.0...v1.1.0) (2025-07-14)
+
+
+### Features
+
+* **home:** Added short about me and tech I know ([247c087](https://github.com/McGeerDev/portfolio/commit/247c087ccf2f482cb8fa743d5fd430292827a2c1))
+
+
+### Bug Fixes
+
+* **imports:** Fixed postcss imports ([5b66097](https://github.com/McGeerDev/portfolio/commit/5b660974a49c179edcfae6623288f68e99db944a))
+
 ## 1.0.0 (2025-07-13)
 
 
