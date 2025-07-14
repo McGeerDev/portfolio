@@ -1,5 +1,5 @@
+import tailwind from "tailwindcss"
+import config from "./tailwind.config"
 export default {
-	plugins: {
-		autoprefixer: {}
-	}
+	plugins: [tailwind(config),autoprefixer]
 };

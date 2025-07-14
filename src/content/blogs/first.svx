@@ -10,8 +10,8 @@ tech:
 
 # First post
 
-This is the first post.
+This is the first post. Here is how you build the production version of the app
 
-```ts
+```typscript
     pnpm run build
 ```
