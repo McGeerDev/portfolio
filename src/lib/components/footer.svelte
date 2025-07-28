@@ -1,18 +1,38 @@
 <script lang="ts">
-	import * as config from '$lib/config';
+	import Icon from '@iconify/svelte'
+	const name = 'Devan McGeer'.toUpperCase()
 </script>
 
-<footer>
-	<p>{config.title} &copy {new Date().getFullYear()}</p>
+<footer class="flex flex-col items-center border-t py-6">
+	<div class="space-x-4 md:flex">
+		<a
+			href="https://github.com/McGeerDev"
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label="GitHub"
+		>
+			<Icon icon="lucide:github" width="24" height="24" />
+		</a>
+		<a
+			href="https://www.linkedin.com/in/devan-mcgeer/"
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label="LinkedIn"
+		>
+			<Icon icon="lucide:linkedin" width="24" height="24" />
+		</a>
+		<a href="mailto:mcgeer.devan@gmail.com" aria-label="Email">
+			<Icon icon="lucide:mail" width="24" height="24" />
+		</a>
+	</div>
+	<div>
+		<p
+			class="text-md mt-4 tracking-[0.3em] text-gray-700 sm:text-lg sm:tracking-[0.4em] md:text-xl"
+		>
+			{name}
+		</p>
+	</div>
 </footer>
 
 <style>
-	footer {
-		padding-block: var(--size-7);
-		border-top: 1px solid var(--border);
-
-		p {
-			color: var(--text-2);
-		}
-	}
 </style>
