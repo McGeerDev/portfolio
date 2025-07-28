@@ -2,16 +2,17 @@
 	import Icon from '@iconify/svelte'
 </script>
 
-<header class="flex items-center justify-between py-6">
-	<div class="text-2xl font-bold tracking-wider">
-		<a href="/">DM</a>
-	</div>
+<header class="flex items-center py-6">
+	<nav class="w-full items-center justify-between md:flex">
+		<div class="hidden text-2xl font-bold tracking-wider md:flex">
+			<a href="/">DM</a>
+		</div>
+		<div class="flex justify-center gap-4">
+			<a href="/" class="tracking-widest hover:text-gray-600">HOME</a>
+			<a href="/blogs" class="tracking-widest hover:text-gray-600">BLOG</a>
+		</div>
 
-	<nav class="hidden items-center space-x-8 md:flex">
-		<a href="/" class="tracking-widest hover:text-gray-600">HOME</a>
-		<a href="/blogs" class="tracking-widest hover:text-gray-600">BLOG</a>
-
-		<div class="flex items-center space-x-4">
+		<div class="hidden space-x-4 md:flex">
 			<a
 				href="https://github.com/McGeerDev"
 				target="_blank"
