@@ -4,7 +4,7 @@
 </script>
 
 <footer class="flex flex-col items-center border-t py-6">
-	<div class="space-x-4 md:flex">
+	<div class="flex flex-wrap justify-center space-x-4">
 		<a
 			href="https://github.com/McGeerDev"
 			target="_blank"
