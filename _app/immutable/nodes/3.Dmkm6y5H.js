@@ -1,0 +1,1 @@
+import{c as e,a as p,l as i}from"../chunks/CJvn86Pc.js";import"../chunks/CbDoGQgp.js";import{x as c,y as l,z as m,F as a,A as n}from"../chunks/CYSq1FT8.js";r[a]="src/routes/blogs/[slug]/+error.svelte";var d=p(n("<div>WRONG PAGE BUDDY</div>"),r[a],[[1,0]]);function r(o,s){e(new.target),c(s,!1,r);var t=d();return l(o,t),m({...i()})}export{r as component};
