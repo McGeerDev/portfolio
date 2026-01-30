@@ -18,3 +18,7 @@ Thumbs.db
 .env.*
 !.env.example
 !.env.test
+
+# Personal notes
+improvements.md
+internalize.md
