@@ -84,27 +84,6 @@ export function Header() {
               </Link>
             ))}
           </nav>
-          <div className="mt-4 flex gap-4 border-t border-black pt-4">
-            <a
-              href="https://github.com/McGeerDev"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              <Github size={20} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/devan-mcgeer/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={20} />
-            </a>
-            <a href="mailto:mcgeer.devan@gmail.com" aria-label="Email">
-              <Mail size={20} />
-            </a>
-          </div>
         </div>
       )}
     </header>
