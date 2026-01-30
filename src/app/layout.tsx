@@ -33,6 +33,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'"
+        />
+      </head>
       <body
         className={`${inter.variable} ${lekton.variable} ${lexendZetta.variable} font-body flex min-h-screen flex-col bg-white text-black antialiased`}
       >
