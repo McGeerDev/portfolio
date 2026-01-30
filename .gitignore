@@ -5,8 +5,6 @@ node_modules
 .vercel
 .netlify
 .wrangler
-/.svelte-kit
-/build
 /.next
 /out
 tsconfig.tsbuildinfo
@@ -20,7 +18,3 @@ Thumbs.db
 .env.*
 !.env.example
 !.env.test
-
-# Vite
-vite.config.js.timestamp-*
-vite.config.ts.timestamp-*
