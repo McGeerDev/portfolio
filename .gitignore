@@ -7,6 +7,9 @@ node_modules
 .wrangler
 /.svelte-kit
 /build
+/.next
+/out
+tsconfig.tsbuildinfo
 
 # OS
 .DS_Store
