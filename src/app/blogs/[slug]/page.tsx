@@ -20,18 +20,21 @@ export default async function BlogPost({
 }) {
   const { slug } = await params;
 
+  let post;
   try {
-    const { metadata, content } = await getPostBySlug(slug);
-
-    return (
-      <>
-        <PageTitle title={metadata.title} />
-        <article className="prose max-w-none">
-          <MDXRemote source={content} />
-        </article>
-      </>
-    );
+    post = await getPostBySlug(slug);
   } catch {
     notFound();
   }
+
+  const { metadata, content } = post;
+
+  return (
+    <>
+      <PageTitle title={metadata.title} />
+      <article className="prose max-w-none">
+        <MDXRemote source={content} />
+      </article>
+    </>
+  );
 }

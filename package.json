@@ -6,7 +6,7 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint",
+		"lint": "eslint .",
 		"check": "tsc --noEmit",
 		"format": "prettier --write ."
 	},
@@ -19,6 +19,7 @@
 		"react-dom": "^19.2.4"
 	},
 	"devDependencies": {
+		"@eslint/compat": "^2.0.1",
 		"@tailwindcss/postcss": "^4.1.18",
 		"@tailwindcss/typography": "^0.5.19",
 		"@types/node": "25.1.0",
