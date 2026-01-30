@@ -57,19 +57,56 @@ export function Header() {
 
         {/* Mobile */}
         <div className="flex w-full items-center justify-between md:hidden">
-          <div className="flex gap-4">
+          <Link href="/" className="text-2xl font-bold tracking-wider">
+            DM
+          </Link>
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+          >
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </nav>
+
+      {menuOpen && (
+        <div className="flex flex-col border-t border-black pt-4 md:hidden">
+          <nav className="flex flex-col gap-3">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm tracking-widest hover:text-gray-600"
+                onClick={() => setMenuOpen(false)}
+                className="text-sm uppercase tracking-widest hover:text-gray-600"
               >
                 {link.label}
               </Link>
             ))}
+          </nav>
+          <div className="mt-4 flex gap-4 border-t border-black pt-4">
+            <a
+              href="https://github.com/McGeerDev"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <Github size={20} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/devan-mcgeer/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={20} />
+            </a>
+            <a href="mailto:mcgeer.devan@gmail.com" aria-label="Email">
+              <Mail size={20} />
+            </a>
           </div>
         </div>
-      </nav>
+      )}
     </header>
   );
 }
