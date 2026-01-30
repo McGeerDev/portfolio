@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { Hero } from "@/components/hero";
+import { PageTitle } from "@/components/page-title";
 import { getAllPosts, getPostBySlug } from "@/lib/mdx";
 
 export function generateStaticParams() {
@@ -20,7 +20,7 @@ export default async function BlogPost({
 
     return (
       <>
-        <Hero title={metadata.title} subtitle={metadata.description} />
+        <PageTitle title={metadata.title} />
         <article className="prose max-w-none">
           <MDXRemote source={content} />
         </article>

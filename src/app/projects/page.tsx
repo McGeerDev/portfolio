@@ -1,9 +1,9 @@
-import { Hero } from "@/components/hero";
+import { PageTitle } from "@/components/page-title";
 
 export default function Projects() {
   return (
     <>
-      <Hero title="Devan McGeer" subtitle="Projects" />
+      <PageTitle title="Projects" />
       <p className="text-center tracking-widest text-gray-500">Coming soon</p>
     </>
   );

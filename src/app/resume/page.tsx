@@ -1,9 +1,9 @@
-import { Hero } from "@/components/hero";
+import { PageTitle } from "@/components/page-title";
 
 export default function Resume() {
   return (
     <>
-      <Hero title="Devan McGeer" subtitle="Resume" />
+      <PageTitle title="Resume" />
       <p className="text-center tracking-widest text-gray-500">Coming soon</p>
     </>
   );

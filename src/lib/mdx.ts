@@ -27,7 +27,7 @@ export function getAllPosts(): PostMeta[] {
         slug: filename.replace(/\.mdx$/, ""),
       };
     })
-    .filter((post) => post.published)
+    .filter((post) => post.published && new Date(post.date) <= new Date())
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return posts;
