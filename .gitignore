@@ -19,6 +19,9 @@ Thumbs.db
 !.env.example
 !.env.test
 
+# Generated
+public/sitemap.xml
+
 # Personal notes
 improvements.md
 internalize.md

@@ -4,7 +4,7 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build",
+		"build": "tsx scripts/generate-sitemap.ts && next build",
 		"start": "next start",
 		"lint": "eslint .",
 		"check": "tsc --noEmit",
@@ -31,6 +31,7 @@
 		"prettier": "^3.8.1",
 		"prettier-plugin-tailwindcss": "^0.7.2",
 		"tailwindcss": "^4.1.18",
+		"tsx": "^4.21.0",
 		"typescript": "^5.9.3"
 	}
 }
