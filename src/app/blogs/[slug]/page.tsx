@@ -3,8 +3,13 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { PageTitle } from "@/components/page-title";
 import { getAllPosts, getPostBySlug } from "@/lib/mdx";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   const posts = getAllPosts();
+  if (posts.length === 0) {
+    return [{ slug: "__placeholder" }];
+  }
   return posts.map((post) => ({ slug: post.slug }));
 }
 
