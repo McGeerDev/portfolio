@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.0](https://github.com/McGeerDev/portfolio/compare/v1.0.0...v1.1.0) (2025-08-27)
+
+
+### Features
+
+* **hero:** Added hero banner ([#19](https://github.com/McGeerDev/portfolio/issues/19)) ([474b7cf](https://github.com/McGeerDev/portfolio/commit/474b7cf01b4ce8cf11bfdda06120de37799d394f))
+* **home:** Added short about me and tech I know ([247c087](https://github.com/McGeerDev/portfolio/commit/247c087ccf2f482cb8fa743d5fd430292827a2c1))
+
+
+### Bug Fixes
+
+* **imports:** Fixed postcss imports ([5b66097](https://github.com/McGeerDev/portfolio/commit/5b660974a49c179edcfae6623288f68e99db944a))
+* **ui:** Cleaned up some ui ([5cc3b3b](https://github.com/McGeerDev/portfolio/commit/5cc3b3bd22cfa5e8a7dbbd2182cf622946e26317))
+
 ## 1.0.0 (2025-07-13)
 
 
