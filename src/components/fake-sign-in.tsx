@@ -8,6 +8,7 @@ export function FakeSignIn() {
   return (
     <>
       <button
+        type="button"
         onClick={() => setShowModal(true)}
         className="flex items-center gap-3 rounded border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50"
       >
