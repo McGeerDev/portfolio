@@ -29,26 +29,25 @@ export function BlogList() {
 			<PageTitle title="Blog" />
 
 			{loading && (
-				<p className="text-center tracking-widest text-muted-foreground">Loading...</p>
+				<p className="tracking-widest text-muted-foreground">Loading...</p>
 			)}
 
 			{error && (
-				<p className="text-center tracking-widest text-muted-foreground">
-					Failed to load posts.
-				</p>
+				<p className="tracking-widest text-muted-foreground">Failed to load posts.</p>
 			)}
 
 			{!loading && !error && (
-				<div className="mb-12 max-h-[27rem] space-y-4 overflow-y-auto pr-2">
-					{posts.map((post) => (
-						<Link
-							key={post.slug}
-							to={`/blog/${post.slug}`}
-							className="block border border-border p-4 transition-colors hover:border-muted-foreground"
-						>
-							<span className="tracking-widest">{post.title.toUpperCase()}</span>
+				<div className="mb-12 space-y-6">
+					{posts.map((post, i) => (
+						<div key={post.slug} className={i > 0 ? 'border-t border-border pt-6' : ''}>
+							<Link
+								to={`/blog/${post.slug}`}
+								className="tracking-widest underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
+							>
+								{post.title.toUpperCase()}
+							</Link>
 							<p className="mt-1 text-sm text-muted-foreground">{post.description}</p>
-						</Link>
+						</div>
 					))}
 				</div>
 			)}

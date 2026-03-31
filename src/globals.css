@@ -6,25 +6,25 @@
   --font-display: "Lexend Zetta", sans-serif;
   --font-body: "Lekton", sans-serif;
 
-  --color-border: oklch(0.91 0.005 260);
-  --color-input: oklch(0.91 0.005 260);
-  --color-ring: oklch(0.15 0.02 260);
+  --color-border: oklch(0.88 0.005 70);
+  --color-input: oklch(0.88 0.005 70);
+  --color-ring: oklch(0.15 0.01 70);
   --color-background: oklch(0.985 0.002 80);
-  --color-foreground: oklch(0.15 0.02 260);
-  --color-primary: oklch(0.22 0.02 260);
-  --color-primary-foreground: oklch(0.97 0.002 260);
-  --color-secondary: oklch(0.96 0.004 260);
-  --color-secondary-foreground: oklch(0.22 0.02 260);
-  --color-muted: oklch(0.96 0.004 260);
-  --color-muted-foreground: oklch(0.55 0.01 260);
-  --color-accent: oklch(0.96 0.004 260);
-  --color-accent-foreground: oklch(0.22 0.02 260);
+  --color-foreground: oklch(0.15 0.01 70);
+  --color-primary: oklch(0.22 0.01 70);
+  --color-primary-foreground: oklch(0.97 0.002 80);
+  --color-secondary: oklch(0.96 0.004 80);
+  --color-secondary-foreground: oklch(0.22 0.01 70);
+  --color-muted: oklch(0.96 0.004 80);
+  --color-muted-foreground: oklch(0.45 0.01 70);
+  --color-accent: oklch(0.96 0.004 80);
+  --color-accent-foreground: oklch(0.22 0.01 70);
   --color-destructive: oklch(0.58 0.22 25);
-  --color-destructive-foreground: oklch(0.97 0.002 260);
+  --color-destructive-foreground: oklch(0.97 0.002 80);
   --color-card: oklch(0.985 0.002 80);
-  --color-card-foreground: oklch(0.15 0.02 260);
+  --color-card-foreground: oklch(0.15 0.01 70);
   --color-popover: oklch(0.985 0.002 80);
-  --color-popover-foreground: oklch(0.15 0.02 260);
+  --color-popover-foreground: oklch(0.15 0.01 70);
 
   --radius: 0.5rem;
 }

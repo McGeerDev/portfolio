@@ -31,15 +31,11 @@ const skillGroups = [
 export function Home() {
 	return (
 		<>
-			<Hero
-				title="Devan McGeer"
-				subtitle="Site Reliability Engineer"
-				tagline="Building reliable systems through observability, automation, and infrastructure as code"
-			/>
+			<Hero title="Devan McGeer" subtitle="Site Reliability Engineer" />
 
-			<hr className="border-foreground" />
+			<hr className="border-border" />
 
-			<div className="pt-20 pb-14 sm:pt-28 sm:pb-20">
+			<div className="pt-8 pb-14 sm:pt-12 sm:pb-20">
 				<div className="grid grid-cols-1 gap-12 md:grid-cols-[1.2fr_0.8fr]">
 					<div>
 						<h2 className="mb-4 text-xl font-bold tracking-widest">ABOUT</h2>
@@ -66,7 +62,7 @@ export function Home() {
 						</p>
 					</div>
 					<div>
-						<h2 className="mb-6 text-xl font-bold tracking-widest">WHAT I WORK WITH</h2>
+						<h2 className="mb-6 text-xl font-bold tracking-widest">SKILLS</h2>
 						<div className="space-y-5">
 							{skillGroups.map((group) => (
 								<div key={group.category}>

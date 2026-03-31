@@ -14,7 +14,7 @@ export function App() {
 		<div className="font-body flex min-h-screen flex-col bg-background text-foreground antialiased">
 			<div className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-4 sm:px-6 lg:px-8">
 				<Header />
-				<hr className="border-foreground" />
+				<hr className="border-border" />
 				<main className="flex-1">
 					<ErrorBoundary>
 						<Routes>
