@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail } from "lucide-react";
+import { FakeSignIn } from "@/components/fake-sign-in";
 
 export function Footer() {
   const name = "DEVAN MCGEER";
@@ -30,6 +31,9 @@ export function Footer() {
         <p className="text-md mt-4 tracking-[0.3em] text-gray-700 sm:text-lg sm:tracking-[0.4em] md:text-xl">
           {name}
         </p>
+      </div>
+      <div className="mt-4">
+        <FakeSignIn />
       </div>
     </footer>
   );
