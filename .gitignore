@@ -5,8 +5,7 @@ node_modules
 .vercel
 .netlify
 .wrangler
-/.next
-/out
+/dist
 tsconfig.tsbuildinfo
 
 # OS
@@ -21,6 +20,7 @@ Thumbs.db
 
 # Generated
 public/sitemap.xml
+public/content/
 
 # Personal notes
 improvements.md

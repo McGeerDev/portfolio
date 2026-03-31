@@ -57,11 +57,11 @@ jobs:
       - run: pnpm build
 
       - name: Add CNAME
-        run: echo "mcgeer.dev" > out/CNAME
+        run: echo "mcgeer.dev" > dist/CNAME
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: out
+          path: dist
 
   deploy:
     needs: [check-activity, build]
