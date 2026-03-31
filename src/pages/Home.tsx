@@ -50,12 +50,13 @@ export function Home() {
 							/>
 						</div>
 						<p className="text-base leading-relaxed text-muted-foreground">
-							Site Reliability Engineer with 5 years of experience across full-stack
-							development and infrastructure engineering. Currently building
-							observability and disaster recovery systems at DIDx. I work across Go,
-							Kubernetes, Terraform, and AWS — focused on reducing toil through
-							automation, improving system reliability through better instrumentation,
-							and making deployment pipelines faster and safer.
+							Site Reliability Engineer with 5 years of experience in platform
+							engineering, infrastructure automation, and full-stack development. I
+							build and operate production Kubernetes clusters, define SLOs and SLIs,
+							and design observability pipelines with Datadog and OpenTelemetry.
+							Day-to-day I write Go and Terraform to automate infrastructure
+							provisioning, improve CI/CD reliability, and reduce operational toil.
+							Currently owning infrastructure reliability at DIDx on AWS.
 						</p>
 						<p className="mt-4 text-sm tracking-wider text-muted-foreground">
 							Available for remote work globally
