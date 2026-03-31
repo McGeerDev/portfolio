@@ -53,7 +53,7 @@ export function Home() {
 							Site Reliability Engineer with 5 years of experience across full-stack
 							development and infrastructure engineering. Currently building
 							observability and disaster recovery systems at DIDx. I work across Go,
-							Kubernetes, Terraform, and GCP — focused on reducing toil through
+							Kubernetes, Terraform, and AWS — focused on reducing toil through
 							automation, improving system reliability through better instrumentation,
 							and making deployment pipelines faster and safer.
 						</p>
