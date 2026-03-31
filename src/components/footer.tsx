@@ -6,13 +6,13 @@ export function Footer() {
 			<p className="text-sm tracking-[0.2em] text-muted-foreground">
 				DEVAN MCGEER
 			</p>
-			<div className="flex space-x-4">
+			<div className="flex space-x-2">
 				<a
 					href="https://github.com/McGeerDev"
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label="GitHub"
-					className="text-muted-foreground transition-colors hover:text-foreground"
+					className="p-2 text-muted-foreground transition-colors hover:text-foreground"
 				>
 					<Github size={20} />
 				</a>
@@ -21,14 +21,14 @@ export function Footer() {
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label="LinkedIn"
-					className="text-muted-foreground transition-colors hover:text-foreground"
+					className="p-2 text-muted-foreground transition-colors hover:text-foreground"
 				>
 					<Linkedin size={20} />
 				</a>
 				<a
 					href="mailto:mcgeer.devan@gmail.com"
 					aria-label="Email"
-					className="text-muted-foreground transition-colors hover:text-foreground"
+					className="p-2 text-muted-foreground transition-colors hover:text-foreground"
 				>
 					<Mail size={20} />
 				</a>

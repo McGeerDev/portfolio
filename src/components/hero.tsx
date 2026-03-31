@@ -7,11 +7,11 @@ export function Hero({
 }) {
 	return (
 		<div className="pt-20 pb-12 sm:pt-32 sm:pb-16">
-			<h1 className="font-display text-[clamp(2.5rem,5vw+1rem,5rem)] leading-tight font-light tracking-widest">
-				{title.toUpperCase()}
+			<h1 className="font-display text-[clamp(2.5rem,5vw+1rem,5rem)] leading-tight font-light uppercase tracking-widest">
+				{title}
 			</h1>
-			<p className="mt-4 text-[clamp(1rem,2vw+0.25rem,1.5rem)] tracking-[0.3em] text-muted-foreground">
-				{subtitle.toUpperCase()}
+			<p className="mt-4 text-[clamp(1rem,2vw+0.25rem,1.5rem)] uppercase tracking-[0.3em] text-muted-foreground">
+				{subtitle}
 			</p>
 		</div>
 	)

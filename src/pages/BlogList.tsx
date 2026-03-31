@@ -44,7 +44,7 @@ export function BlogList() {
 								to={`/blog/${post.slug}`}
 								className="tracking-widest underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
 							>
-								{post.title.toUpperCase()}
+								<span className="uppercase">{post.title}</span>
 							</Link>
 							<p className="mt-1 text-sm text-muted-foreground">{post.description}</p>
 						</div>

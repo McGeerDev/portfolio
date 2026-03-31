@@ -41,9 +41,6 @@ export function Header() {
 					))}
 				</div>
 
-				{/* Spacer to balance the layout */}
-				<div className="hidden w-16 md:block" />
-
 				{/* Mobile */}
 				<div className="flex w-full items-center justify-between md:hidden">
 					<Link to="/" className="text-2xl font-bold tracking-wider">

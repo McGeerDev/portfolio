@@ -39,7 +39,7 @@ export function Home() {
 				<div className="grid grid-cols-1 gap-12 md:grid-cols-[1.2fr_0.8fr]">
 					<div>
 						<h2 className="mb-4 text-xl font-bold tracking-widest">ABOUT</h2>
-						<div className="mb-5 flex justify-center md:justify-start">
+						<div className="mb-5">
 							<img
 								src="/assets/headshot.jpg"
 								alt="Devan McGeer"

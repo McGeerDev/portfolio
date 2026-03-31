@@ -35,7 +35,7 @@ export function BlogPost() {
 
 	if (loading) {
 		return (
-			<p className="py-10 text-center tracking-widest text-muted-foreground">Loading...</p>
+			<p className="py-10 tracking-widest text-muted-foreground">Loading...</p>
 		)
 	}
 
