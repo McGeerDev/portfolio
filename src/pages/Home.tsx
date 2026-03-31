@@ -31,19 +31,15 @@ const skillGroups = [
 export function Home() {
 	return (
 		<>
-			<Hero
-				title="Devan McGeer"
-				subtitle="Site Reliability Engineer"
-				tagline="Building reliable systems through observability, automation, and infrastructure as code"
-			/>
+			<Hero title="Devan McGeer" subtitle="Site Reliability Engineer" />
 
-			<hr className="border-foreground" />
+			<hr className="border-border" />
 
-			<div className="pt-20 pb-14 sm:pt-28 sm:pb-20">
+			<div className="pt-8 pb-14 sm:pt-12 sm:pb-20">
 				<div className="grid grid-cols-1 gap-12 md:grid-cols-[1.2fr_0.8fr]">
 					<div>
 						<h2 className="mb-4 text-xl font-bold tracking-widest">ABOUT</h2>
-						<div className="mb-5 flex justify-center md:justify-start">
+						<div className="mb-5">
 							<img
 								src="/assets/headshot.jpg"
 								alt="Devan McGeer"
@@ -54,19 +50,20 @@ export function Home() {
 							/>
 						</div>
 						<p className="text-base leading-relaxed text-muted-foreground">
-							Site Reliability Engineer with 5 years of experience across full-stack
-							development and infrastructure engineering. Currently building
-							observability and disaster recovery systems at DIDx. I work across Go,
-							Kubernetes, Terraform, and GCP — focused on reducing toil through
-							automation, improving system reliability through better instrumentation,
-							and making deployment pipelines faster and safer.
+							Site Reliability Engineer with 5 years of experience in platform
+							engineering, infrastructure automation, and full-stack development. I
+							build and operate production Kubernetes clusters, define SLOs and SLIs,
+							and design observability pipelines with Datadog and OpenTelemetry.
+							Day-to-day I write Go and Terraform to automate infrastructure
+							provisioning, improve CI/CD reliability, and reduce operational toil.
+							Currently owning infrastructure reliability at DIDx on AWS.
 						</p>
 						<p className="mt-4 text-sm tracking-wider text-muted-foreground">
 							Available for remote work globally
 						</p>
 					</div>
 					<div>
-						<h2 className="mb-6 text-xl font-bold tracking-widest">WHAT I WORK WITH</h2>
+						<h2 className="mb-6 text-xl font-bold tracking-widest">SKILLS</h2>
 						<div className="space-y-5">
 							{skillGroups.map((group) => (
 								<div key={group.category}>

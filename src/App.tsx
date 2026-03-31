@@ -12,10 +12,16 @@ import { NotFound } from '@/pages/NotFound'
 export function App() {
 	return (
 		<div className="font-body flex min-h-screen flex-col bg-background text-foreground antialiased">
+			<a
+				href="#main"
+				className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-foreground focus:px-4 focus:py-2 focus:text-background"
+			>
+				Skip to content
+			</a>
 			<div className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-4 sm:px-6 lg:px-8">
 				<Header />
-				<hr className="border-foreground" />
-				<main className="flex-1">
+				<hr className="border-border" />
+				<main id="main" className="flex-1">
 					<ErrorBoundary>
 						<Routes>
 							<Route path="/" element={<Home />} />

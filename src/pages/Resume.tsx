@@ -1,3 +1,4 @@
+import { Download } from 'lucide-react'
 import { PageTitle } from '@/components/page-title'
 
 interface Role {
@@ -121,6 +122,15 @@ export function Resume() {
 	return (
 		<>
 			<PageTitle title="Resume" />
+
+			<a
+				href="/assets/devan-mcgeer-cv.pdf"
+				download
+				className="mb-10 inline-flex items-center gap-2 border border-foreground px-5 py-2 text-sm uppercase tracking-widest transition-colors hover:bg-foreground hover:text-background"
+			>
+				<Download size={16} />
+				Download CV
+			</a>
 
 			<section className="pb-14 sm:pb-20">
 				<h2 className="mb-10 text-xl font-bold tracking-widest">EXPERIENCE</h2>

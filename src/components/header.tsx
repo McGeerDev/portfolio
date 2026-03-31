@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Github, Linkedin, Mail, Menu, X } from 'lucide-react'
+import { Link, useLocation } from 'react-router-dom'
+import { Menu, X } from 'lucide-react'
 
 const navLinks = [
 	{ to: '/', label: 'HOME' },
@@ -9,8 +9,14 @@ const navLinks = [
 	{ to: '/resume', label: 'RESUME' },
 ]
 
+function isActive(pathname: string, to: string): boolean {
+	if (to === '/') return pathname === '/'
+	return pathname.startsWith(to)
+}
+
 export function Header() {
 	const [menuOpen, setMenuOpen] = useState(false)
+	const { pathname } = useLocation()
 
 	return (
 		<header className="flex flex-col py-6">
@@ -19,38 +25,20 @@ export function Header() {
 					<Link to="/">DM</Link>
 				</div>
 
-				<div className="hidden gap-4 md:flex">
+				<div className="hidden gap-6 md:flex">
 					{navLinks.map((link) => (
 						<Link
 							key={link.to}
 							to={link.to}
-							className="tracking-widest hover:text-muted-foreground"
+							className={`tracking-widest transition-colors hover:text-muted-foreground ${
+								isActive(pathname, link.to)
+									? 'underline decoration-foreground underline-offset-4'
+									: ''
+							}`}
 						>
 							{link.label}
 						</Link>
 					))}
-				</div>
-
-				<div className="hidden space-x-4 md:flex">
-					<a
-						href="https://github.com/McGeerDev"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="GitHub"
-					>
-						<Github size={24} />
-					</a>
-					<a
-						href="https://www.linkedin.com/in/devan-mcgeer/"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="LinkedIn"
-					>
-						<Linkedin size={24} />
-					</a>
-					<a href="mailto:mcgeer.devan@gmail.com" aria-label="Email">
-						<Mail size={24} />
-					</a>
 				</div>
 
 				{/* Mobile */}
@@ -69,14 +57,16 @@ export function Header() {
 			</nav>
 
 			{menuOpen && (
-				<div className="flex flex-col border-t border-foreground pt-4 md:hidden">
-					<nav className="flex flex-col gap-3">
+				<div className="flex flex-col border-t border-border pt-4 md:hidden">
+					<nav className="flex flex-col">
 						{navLinks.map((link) => (
 							<Link
 								key={link.to}
 								to={link.to}
 								onClick={() => setMenuOpen(false)}
-								className="text-sm uppercase tracking-widest hover:text-muted-foreground"
+								className={`py-3 text-base uppercase tracking-widest hover:text-muted-foreground ${
+									isActive(pathname, link.to) ? 'font-bold' : ''
+								}`}
 							>
 								{link.label}
 							</Link>
