@@ -12,7 +12,7 @@ export function Footer() {
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label="GitHub"
-					className="p-2 text-muted-foreground transition-colors hover:text-foreground"
+					className="p-3 text-muted-foreground transition-colors hover:text-foreground"
 				>
 					<Github size={20} />
 				</a>
@@ -21,14 +21,14 @@ export function Footer() {
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label="LinkedIn"
-					className="p-2 text-muted-foreground transition-colors hover:text-foreground"
+					className="p-3 text-muted-foreground transition-colors hover:text-foreground"
 				>
 					<Linkedin size={20} />
 				</a>
 				<a
 					href="mailto:mcgeer.devan@gmail.com"
 					aria-label="Email"
-					className="p-2 text-muted-foreground transition-colors hover:text-foreground"
+					className="p-3 text-muted-foreground transition-colors hover:text-foreground"
 				>
 					<Mail size={20} />
 				</a>
