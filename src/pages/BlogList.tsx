@@ -43,7 +43,7 @@ export function BlogList() {
 					{posts.map((post) => (
 						<Link
 							key={post.slug}
-							to={`/blogs/${post.slug}`}
+							to={`/blog/${post.slug}`}
 							className="block border border-border p-4 transition-colors hover:border-muted-foreground"
 						>
 							<span className="tracking-widest">{post.title.toUpperCase()}</span>

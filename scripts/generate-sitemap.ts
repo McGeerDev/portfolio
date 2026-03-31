@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 
 const SITE_URL = 'https://mcgeer.dev'
 
-const staticRoutes = ['/', '/blogs', '/projects', '/resume']
+const staticRoutes = ['/', '/blog', '/projects', '/resume']
 
 function getPublishedBlogSlugs(): string[] {
 	const contentDir = path.join(process.cwd(), 'content/blogs')
@@ -26,7 +26,7 @@ function getPublishedBlogSlugs(): string[] {
 
 function buildSitemap(): string {
 	const blogSlugs = getPublishedBlogSlugs()
-	const blogRoutes = blogSlugs.map((slug) => `/blogs/${slug}`)
+	const blogRoutes = blogSlugs.map((slug) => `/blog/${slug}`)
 	const allRoutes = [...staticRoutes, ...blogRoutes]
 
 	const today = new Date().toISOString().split('T')[0]
