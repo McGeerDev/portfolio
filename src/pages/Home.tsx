@@ -47,6 +47,8 @@ export function Home() {
 							<img
 								src="/assets/headshot.jpg"
 								alt="Devan McGeer"
+								width="144"
+								height="144"
 								className="h-36 w-36 rounded-sm object-cover"
 								loading="lazy"
 							/>
