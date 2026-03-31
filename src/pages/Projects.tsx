@@ -6,6 +6,7 @@ interface Project {
 	description: string
 	tech: string[]
 	status: 'live' | 'upcoming'
+	visible: boolean
 	url?: string
 }
 
@@ -16,6 +17,7 @@ const projects: Project[] = [
 			'Documented home Kubernetes cluster with Terraform provisioning, ArgoCD GitOps deployment, and a Grafana/Prometheus observability stack.',
 		tech: ['Kubernetes', 'Terraform', 'ArgoCD', 'Prometheus', 'Grafana'],
 		status: 'upcoming',
+		visible: true,
 	},
 	{
 		title: 'slo-dashboard',
@@ -23,6 +25,7 @@ const projects: Project[] = [
 			'Go CLI that reads SLO definitions from YAML, queries metrics backends for SLI data, and calculates error budget burn rate.',
 		tech: ['Go', 'Datadog', 'Prometheus', 'YAML'],
 		status: 'upcoming',
+		visible: false,
 	},
 	{
 		title: 'terraform-module-library',
@@ -30,6 +33,7 @@ const projects: Project[] = [
 			'Reusable, opinionated Terraform modules for AWS infrastructure — VPC, EKS, RDS, IAM — with input validation and documentation.',
 		tech: ['Terraform', 'AWS', 'HCL'],
 		status: 'upcoming',
+		visible: false,
 	},
 	{
 		title: 'incident-bot',
@@ -37,6 +41,7 @@ const projects: Project[] = [
 			'Slack bot in Go for incident management: open incidents, assign roles, track timelines, and generate post-mortem templates.',
 		tech: ['Go', 'Slack API', 'PostgreSQL'],
 		status: 'upcoming',
+		visible: false,
 	},
 	{
 		title: 'otel-demo',
@@ -44,6 +49,7 @@ const projects: Project[] = [
 			'Microservices demo with 3 Go services communicating via gRPC, fully instrumented with OpenTelemetry traces, metrics, and logs.',
 		tech: ['Go', 'OpenTelemetry', 'gRPC', 'Docker Compose', 'Grafana'],
 		status: 'upcoming',
+		visible: false,
 	},
 ]
 
@@ -53,7 +59,7 @@ export function Projects() {
 			<PageTitle title="Projects" />
 
 			<div className="mb-12 space-y-0">
-				{projects.map((project, i) => (
+				{projects.filter((p) => p.visible).map((project, i) => (
 					<div
 						key={project.title}
 						className={i > 0 ? 'border-t border-border pt-8 mt-8' : ''}
