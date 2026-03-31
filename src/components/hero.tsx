@@ -6,7 +6,7 @@ export function Hero({
 	subtitle?: string
 }) {
 	return (
-		<div className="pt-20 pb-12 sm:pt-32 sm:pb-16">
+		<div className="pt-10 pb-10 sm:pt-16 sm:pb-14">
 			<h1 className="font-display text-[clamp(2.5rem,5vw+1rem,5rem)] leading-tight font-light uppercase tracking-widest">
 				{title}
 			</h1>
