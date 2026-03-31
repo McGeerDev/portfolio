@@ -3,14 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { PageTitle } from '@/components/page-title'
-
-interface PostMeta {
-	title: string
-	description: string
-	date: string
-	tech: string[]
-	slug: string
-}
+import type { PostMeta } from '@/types/blog'
 
 export function BlogPost() {
 	const { slug } = useParams<{ slug: string }>()
@@ -30,7 +23,7 @@ export function BlogPost() {
 			}),
 		])
 			.then(([posts, md]: [PostMeta[], string]) => {
-				const post = posts.find((p) => p.slug === slug)
+				const post = posts.find((p) => p.slug === decodeURIComponent(slug))
 				if (post) setMeta(post)
 				setContent(md)
 				setLoading(false)
@@ -40,7 +33,11 @@ export function BlogPost() {
 			})
 	}, [slug, navigate])
 
-	if (loading) return null
+	if (loading) {
+		return (
+			<p className="py-10 text-center tracking-widest text-muted-foreground">Loading...</p>
+		)
+	}
 
 	return (
 		<>

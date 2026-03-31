@@ -15,13 +15,17 @@ interface PostMeta {
 	slug: string
 }
 
-function sanitize(value: unknown): string {
-	return String(value ?? '')
-		.replace(/&/g, '&amp;')
-		.replace(/</g, '&lt;')
-		.replace(/>/g, '&gt;')
-		.replace(/"/g, '&quot;')
-		.replace(/'/g, '&#39;')
+function isValidDate(dateStr: string): boolean {
+	const d = new Date(dateStr)
+	return !isNaN(d.getTime())
+}
+
+if (!fs.existsSync(contentDir)) {
+	console.warn(`Content directory not found: ${contentDir}`)
+	fs.mkdirSync(blogsOutDir, { recursive: true })
+	fs.writeFileSync(path.join(outDir, 'posts.json'), '[]')
+	console.log('Content built: 0 published post(s) → public/content/')
+	process.exit(0)
 }
 
 fs.mkdirSync(blogsOutDir, { recursive: true })
@@ -34,13 +38,19 @@ const posts: PostMeta[] = files
 		const fileContent = fs.readFileSync(filePath, 'utf-8')
 		const { data, content } = matter(fileContent)
 
-		const slug = encodeURIComponent(filename.replace(/\.mdx$/, ''))
+		const slug = filename.replace(/\.mdx$/, '')
+		const dateStr = String(data.date ?? '')
+
+		if (dateStr && !isValidDate(dateStr)) {
+			console.warn(`Skipping "${filename}": invalid date "${dateStr}"`)
+			return null
+		}
 
 		return {
 			meta: {
-				title: sanitize(data.title),
-				description: sanitize(data.description),
-				date: String(data.date ?? ''),
+				title: String(data.title ?? '').trim(),
+				description: String(data.description ?? '').trim(),
+				date: dateStr,
 				published: Boolean(data.published),
 				tech: Array.isArray(data.tech) ? data.tech.map(String) : [],
 				slug,
@@ -48,7 +58,10 @@ const posts: PostMeta[] = files
 			content,
 		}
 	})
-	.filter((post) => post.meta.published && new Date(post.meta.date) <= new Date())
+	.filter(
+		(post): post is NonNullable<typeof post> =>
+			post !== null && post.meta.published && new Date(post.meta.date) <= new Date(),
+	)
 	.sort((a, b) => new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime())
 	.map((post) => {
 		fs.writeFileSync(path.join(blogsOutDir, `${post.meta.slug}.md`), post.content)

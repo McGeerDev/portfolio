@@ -1,4 +1,4 @@
-import { Component, type ReactNode } from 'react'
+import { Component, type ErrorInfo, type ReactNode } from 'react'
 
 interface Props {
 	children: ReactNode
@@ -18,6 +18,10 @@ export class ErrorBoundary extends Component<Props, State> {
 		return { hasError: true }
 	}
 
+	componentDidCatch(error: Error, info: ErrorInfo) {
+		console.error('ErrorBoundary caught:', error, info.componentStack)
+	}
+
 	render() {
 		if (this.state.hasError) {
 			return (
@@ -27,7 +31,7 @@ export class ErrorBoundary extends Component<Props, State> {
 					</h1>
 					<p className="font-body mt-4 text-lg">Something went wrong.</p>
 					<button
-						onClick={() => this.setState({ hasError: false })}
+						onClick={() => window.location.reload()}
 						className="mt-8 border border-foreground px-6 py-2 font-body text-sm uppercase tracking-wider transition-colors hover:bg-foreground hover:text-background"
 					>
 						Try Again
