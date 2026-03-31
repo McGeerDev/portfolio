@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, Menu, X } from 'lucide-react'
 
 const navLinks = [
 	{ to: '/', label: 'HOME' },
-	{ to: '/blogs', label: 'BLOG' },
+	{ to: '/blog', label: 'BLOG' },
 	{ to: '/projects', label: 'PROJECTS' },
 	{ to: '/resume', label: 'RESUME' },
 ]

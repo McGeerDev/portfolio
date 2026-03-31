@@ -1,18 +1,25 @@
 export function Hero({
-  title = "Devan McGeer",
-  subtitle = "Site Reliability Engineer",
+	title = 'Devan McGeer',
+	subtitle = 'Site Reliability Engineer',
+	tagline,
 }: {
-  title?: string;
-  subtitle?: string;
+	title?: string
+	subtitle?: string
+	tagline?: string
 }) {
-  return (
-    <div className="py-16 text-center sm:py-24">
-      <h1 className="font-display text-4xl leading-tight font-light tracking-widest sm:text-6xl md:text-7xl">
-        {title.toUpperCase()}
-      </h1>
-      <p className="mt-6 text-lg tracking-[0.3em] text-muted-foreground sm:text-xl sm:tracking-[0.4em] md:text-2xl">
-        {subtitle.toUpperCase()}
-      </p>
-    </div>
-  );
+	return (
+		<div className="py-16 text-center sm:py-24">
+			<h1 className="font-display text-4xl leading-tight font-light tracking-widest sm:text-6xl md:text-7xl">
+				{title.toUpperCase()}
+			</h1>
+			<p className="mt-6 text-lg tracking-[0.3em] text-muted-foreground sm:text-xl sm:tracking-[0.4em] md:text-2xl">
+				{subtitle.toUpperCase()}
+			</p>
+			{tagline && (
+				<p className="mt-4 text-sm tracking-wider text-muted-foreground sm:text-base">
+					{tagline}
+				</p>
+			)}
+		</div>
+	)
 }

@@ -19,8 +19,8 @@ export function App() {
 					<ErrorBoundary>
 						<Routes>
 							<Route path="/" element={<Home />} />
-							<Route path="/blogs" element={<BlogList />} />
-							<Route path="/blogs/:slug" element={<BlogPost />} />
+							<Route path="/blog" element={<BlogList />} />
+							<Route path="/blog/:slug" element={<BlogPost />} />
 							<Route path="/projects" element={<Projects />} />
 							<Route path="/resume" element={<Resume />} />
 							<Route path="*" element={<NotFound />} />
