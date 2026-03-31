@@ -14,35 +14,24 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
-  check-activity:
-    if: github.event_name == 'schedule'
+  build:
     runs-on: ubuntu-latest
-    outputs:
-      has_changes: ${{ steps.check.outputs.has_changes }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Check for recent commits
-        id: check
+      - name: Skip if scheduled with no recent commits
+        if: github.event_name == 'schedule'
         run: |
           RECENT=$(git log --since="24 hours ago" --oneline)
-          if [ -n "$RECENT" ]; then
-            echo "has_changes=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          if [ -z "$RECENT" ]; then
+            echo "No commits in last 24h, skipping"
+            exit 1
           fi
-
-  build:
-    runs-on: ubuntu-latest
-    needs: check-activity
-    if: always() && (github.event_name == 'push' || needs.check-activity.outputs.has_changes == 'true')
-    steps:
-      - uses: actions/checkout@v4
 
       - uses: pnpm/action-setup@v4
         with:
@@ -53,7 +42,9 @@ jobs:
           node-version: 22
           cache: pnpm
 
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run lint
+      - run: pnpm run check
       - run: pnpm build
 
       - name: Add CNAME
@@ -64,8 +55,7 @@ jobs:
           path: dist
 
   deploy:
-    needs: [check-activity, build]
-    if: always() && needs.build.result == 'success'
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
