@@ -60,7 +60,7 @@ export function Home() {
 							and making deployment pipelines faster and safer.
 						</p>
 						<p className="mt-4 text-sm tracking-wider text-muted-foreground">
-							Based in South Africa
+							Available for remote work globally
 						</p>
 					</div>
 					<div>
