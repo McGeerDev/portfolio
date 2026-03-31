@@ -4,7 +4,7 @@ import { Pill } from '@/components/pill'
 const skillGroups = [
 	{
 		category: 'Infrastructure & Cloud',
-		skills: ['Kubernetes', 'Terraform', 'GCP', 'Docker'],
+		skills: ['Kubernetes', 'Terraform', 'AWS', 'GCP', 'Docker'],
 	},
 	{
 		category: 'Languages',
@@ -16,7 +16,7 @@ const skillGroups = [
 	},
 	{
 		category: 'Messaging & Data',
-		skills: ['NATS', 'Pub/Sub', 'MongoDB'],
+		skills: ['NATS', 'Pub/Sub', 'MongoDB', 'PostgreSQL'],
 	},
 	{
 		category: 'CI/CD & Tooling',
@@ -60,7 +60,7 @@ export function Home() {
 							and making deployment pipelines faster and safer.
 						</p>
 						<p className="mt-4 text-sm tracking-wider text-muted-foreground">
-							Based in South Africa · Open to relocation to Germany
+							Based in South Africa
 						</p>
 					</div>
 					<div>
