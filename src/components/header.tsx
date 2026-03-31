@@ -57,7 +57,7 @@ export function Header() {
 			</nav>
 
 			{menuOpen && (
-				<div className="flex flex-col border-t border-foreground pt-4 md:hidden">
+				<div className="flex flex-col border-t border-border pt-4 md:hidden">
 					<nav className="flex flex-col">
 						{navLinks.map((link) => (
 							<Link
