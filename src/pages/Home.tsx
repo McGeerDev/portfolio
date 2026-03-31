@@ -41,10 +41,10 @@ export function Home() {
 						<h2 className="mb-4 text-xl font-bold tracking-widest">ABOUT</h2>
 						<div className="mb-5">
 							<img
-								src="/assets/headshot.jpg"
+								src="/assets/headshot.webp"
 								alt="Devan McGeer"
-								width="144"
-								height="144"
+								width="288"
+								height="288"
 								className="h-36 w-36 rounded-sm object-cover"
 								loading="lazy"
 							/>
