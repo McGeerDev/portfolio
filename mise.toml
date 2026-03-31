@@ -1,3 +1,27 @@
 [tools]
 node = "22"
 pnpm = "10"
+
+[tasks.dev]
+description = "Start Vite dev server on localhost"
+run = "pnpm run dev"
+
+[tasks.build]
+description = "Build content, sitemap, and production bundle"
+run = "pnpm run build"
+
+[tasks.preview]
+description = "Preview production build"
+run = "pnpm run preview"
+
+[tasks.lint]
+description = "Run ESLint"
+run = "pnpm run lint"
+
+[tasks.check]
+description = "Run TypeScript type checking"
+run = "pnpm run check"
+
+[tasks.format]
+description = "Format code with Prettier"
+run = "pnpm run format"
