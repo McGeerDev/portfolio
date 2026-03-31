@@ -133,7 +133,7 @@ export function Resume() {
 						>
 							{exp.roles.map((role, j) => (
 								<div
-									key={j}
+									key={`${role.title}-${role.start}`}
 									className={`grid grid-cols-1 gap-1 sm:grid-cols-[10rem_1fr] sm:gap-6${j > 0 ? ' mt-8' : ''}`}
 								>
 									<p className="text-sm tracking-wide text-muted-foreground sm:pt-0.5">
