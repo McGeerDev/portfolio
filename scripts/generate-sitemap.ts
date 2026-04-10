@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 
 const SITE_URL = 'https://mcgeer.dev'
 
-const staticRoutes = ['/', '/blog', '/projects', '/resume']
+const staticRoutes = ['/', '/resume']
 
 function getPublishedBlogSlugs(): string[] {
 	const contentDir = path.join(process.cwd(), 'content/blogs')
