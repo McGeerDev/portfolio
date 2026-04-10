@@ -3,10 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta
-			http-equiv="Content-Security-Policy"
-			content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://mcgeer.dev; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'"
-		/>
+		<meta http-equiv="Content-Security-Policy" content="%VITE_CSP%" />
 		<title>Devan McGeer — Site Reliability Engineer</title>
 		<meta name="description" content="Site Reliability Engineer with 5 years of experience in Kubernetes, Terraform, Go, and AWS. Building observability pipelines, automating infrastructure, and improving CI/CD reliability for production systems." />
 		<meta property="og:title" content="Devan McGeer — Site Reliability Engineer" />
@@ -18,18 +15,13 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="preload" href="https://fonts.gstatic.com/s/lekton/v21/SZc43FDmLaWmWpBuWB3pv0Db6A.woff2" as="font" type="font/woff2" crossorigin />
-		<link rel="preload" href="https://fonts.gstatic.com/s/lekton/v21/SZc73FDmLaWmWpBm4zj8kmLWwjFHgA.woff2" as="font" type="font/woff2" crossorigin />
-		<link rel="preload" href="https://fonts.gstatic.com/s/lexendzetta/v32/ll8uK2KYXje7CdOFnEWcU8synQbuVYjYB3BCy9bG4zlpb-0vftqvPQ.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="https://fonts.gstatic.com/s/lekton/v21/SZc43FDmLaWmWpBuWB3pv0Db6A.woff2" as="font" type="font/woff2" crossorigin integrity="sha384-Va3qYLQGT9BswpNgOZ6wTcqAJNl7SKNbVaT760BJ5u6Wi/AFJKIvSAvcTSTpowy6" />
+		<link rel="preload" href="https://fonts.gstatic.com/s/lekton/v21/SZc73FDmLaWmWpBm4zj8kmLWwjFHgA.woff2" as="font" type="font/woff2" crossorigin integrity="sha384-Pu5rgB+GhG617AKxmvcghkzEN+L9J1NS4H0hlZBNMtNTQSDnURoPf14U5UyQJI+7" />
+		<link rel="preload" href="https://fonts.gstatic.com/s/lexendzetta/v32/ll8uK2KYXje7CdOFnEWcU8synQbuVYjYB3BCy9bG4zlpb-0vftqvPQ.woff2" as="font" type="font/woff2" crossorigin integrity="sha384-Tr0JI6yl5TOHU03C+rBzeqGgeY3KaYYa9+foVjbxg+4aj77IL+VKESNBeBQj+sfv" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Lekton:wght@400;700&family=Lexend+Zetta&display=swap"
 			rel="stylesheet"
-			media="print"
-			onload="this.media='all'"
 		/>
-		<noscript>
-			<link href="https://fonts.googleapis.com/css2?family=Lekton:wght@400;700&family=Lexend+Zetta&display=swap" rel="stylesheet" />
-		</noscript>
 </head>
 	<body>
 		<div id="root"></div>
