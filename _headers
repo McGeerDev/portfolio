@@ -1,0 +1,23 @@
+# Cloudflare Pages cache rules. No-op on GitHub Pages (current host).
+# `immutable` is deferred until filenames are content-hashed in a follow-up.
+
+/fonts/*
+  Cache-Control: public, max-age=2592000
+
+/assets/*
+  Cache-Control: public, max-age=2592000
+
+/og-image.png
+  Cache-Control: public, max-age=2592000
+
+/favicon.svg
+  Cache-Control: public, max-age=2592000
+
+/style.css
+  Cache-Control: public, max-age=86400
+
+/*.html
+  Cache-Control: public, max-age=600, must-revalidate
+
+/
+  Cache-Control: public, max-age=600, must-revalidate
