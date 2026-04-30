@@ -38,10 +38,19 @@ jobs:
             echo "has_commits=true" >> $GITHUB_OUTPUT
           fi
 
+      - name: Stage site
+        if: github.event_name != 'schedule' || steps.check.outputs.has_commits == 'true'
+        run: |
+          mkdir _site
+          cp -r index.html 404.html style.css favicon.svg og-image.png \
+                robots.txt sitemap.xml CNAME \
+                fonts assets resume \
+                _site/
+
       - uses: actions/upload-pages-artifact@v3
         if: github.event_name != 'schedule' || steps.check.outputs.has_commits == 'true'
         with:
-          path: static-build
+          path: _site
 
   deploy:
     needs: build
