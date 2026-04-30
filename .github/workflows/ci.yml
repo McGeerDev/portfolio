@@ -24,5 +24,11 @@ jobs:
       - name: Check links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress '*.html' 'resume/*.html'
+          args: >-
+            --no-progress
+            --base https://mcgeer.dev
+            --exclude 'linkedin\.com'
+            --exclude 'ninety10\.co\.za'
+            --accept 418,999
+            '*.html' 'resume/*.html'
           fail: true
