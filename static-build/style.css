@@ -1,6 +1,6 @@
 /* ===== Fonts ===== */
 @font-face {
-  font-family: 'Lekton';
+  font-family: Lekton;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-  font-family: 'Lekton';
+  font-family: Lekton;
   font-style: normal;
   font-weight: 700;
   font-display: swap;
