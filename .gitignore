@@ -1,13 +1,5 @@
 node_modules
 
-# Output
-.output
-.vercel
-.netlify
-.wrangler
-/dist
-tsconfig.tsbuildinfo
-
 # OS
 .DS_Store
 Thumbs.db
@@ -18,10 +10,5 @@ Thumbs.db
 !.env.example
 !.env.test
 
-# Generated
-public/sitemap.xml
-public/content/
-
-# Personal notes
-improvements.md
-internalize.md
+# Deploy staging
+_site/
