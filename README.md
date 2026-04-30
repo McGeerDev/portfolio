@@ -1,55 +1,43 @@
 
 [![CI](https://github.com/McGeerDev/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/McGeerDev/portfolio/actions/workflows/ci.yml)
 
-# mcgeer.dev &mdash; Devan McGeer Portfolio
+# mcgeer.dev &mdash; Devan McGeer
 
-Welcome to the source code for my personal portfolio and blog, [mcgeer.dev](https://mcgeer.dev/).  
-This site showcases my work as a Site Reliability Engineer, my blog posts, and the tools and technologies I use.
+Source for [mcgeer.dev](https://mcgeer.dev/) — a personal portfolio and SRE resume site.
 
-## Features
+## Stack
 
-- Personal portfolio and project highlights
-- Technical blog (written in Markdown/SVX)
-- Built with [SvelteKit](https://kit.svelte.dev/), [Tailwind CSS](https://tailwindcss.com/), and [TypeScript](https://www.typescriptlang.org/)
-- Responsive, fast, and modern design
-
-## Getting Started
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/)
-- [pnpm](https://pnpm.io/)
-
-### Install dependencies
-
-```sh
-pnpm install
-```
-
-### Run the development server
-
-```sh
-pnpm run dev
-```
-
-The site will be available at [http://localhost:5173](http://localhost:5173) by default.
-
-### Build for production
-
-```sh
-pnpm run build
-```
-
-### Preview the production build
-
-```sh
-pnpm run preview
-```
+React 19 · TypeScript · Tailwind CSS v4 · Vite · pnpm · Node 22. Deployed to GitHub Pages.
 
 ## Project Structure
 
-- `src/` &mdash; Main source code (routes, components, styles, blog content)
-- `src/content/blogs/` &mdash; Blog posts in Markdown/SVX
-- `public/` &mdash; Static assets
-- `build/` &mdash; Production build output
-- `docs/` &mdash; (Optional) Static site output for GitHub Pages
+- `src/` &mdash; React app. Entry point: `src/main.tsx`.
+- `content/blogs/` &mdash; Markdown blog posts; compiled to `public/content/posts.json` at build time.
+- `dist/` &mdash; Vite output (`outDir` in `vite.config.ts`). `dist/404.html` mirrors `index.html` for GitHub Pages SPA routing.
+- `static-build/` &mdash; Pre-built static assets (fonts, resume).
+- `.github/workflows/deploy.yml` &mdash; Builds and deploys `dist/` to Pages on push to `main`.
+- `.github/workflows/ci.yml` &mdash; Lint + type-check on pull requests.
+
+## Development
+
+```sh
+pnpm install       # install dependencies
+pnpm dev           # dev server at http://localhost:5173 (runs build-content first)
+```
+
+## Build & Preview
+
+```sh
+pnpm build         # content → sitemap → vite build → dist/
+pnpm preview       # preview the production build locally
+```
+
+## Linting & Formatting
+
+```sh
+pnpm format        # Prettier
+pnpm lint          # ESLint
+pnpm check         # TypeScript type-check (tsc --noEmit)
+```
+
+Run `pnpm format` before committing. CI enforces `pnpm lint` and `pnpm check` on every PR.
