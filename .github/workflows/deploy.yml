@@ -19,43 +19,33 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      has_commits: ${{ steps.check.outputs.has_commits }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Skip if scheduled with no recent commits
+      - name: Check for recent commits (scheduled runs only)
+        id: check
         if: github.event_name == 'schedule'
         run: |
           RECENT=$(git log --since="24 hours ago" --oneline)
           if [ -z "$RECENT" ]; then
             echo "No commits in last 24h, skipping"
-            exit 1
+            echo "has_commits=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_commits=true" >> $GITHUB_OUTPUT
           fi
 
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 10
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: pnpm
-
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm run lint
-      - run: pnpm run check
-      - run: pnpm build
-
-      - name: Add CNAME
-        run: echo "mcgeer.dev" > dist/CNAME
-
       - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'schedule' || steps.check.outputs.has_commits == 'true'
         with:
-          path: dist
+          path: static-build
 
   deploy:
     needs: build
+    if: github.event_name != 'schedule' || needs.build.outputs.has_commits == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
