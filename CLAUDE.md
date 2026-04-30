@@ -1,31 +1,45 @@
-# CLAUDE.md
+# mcgeer.dev Portfolio
 
-> Project-level rules. Global persona, language, and SRE context live in `~/.claude/CLAUDE.md`.
+Personal portfolio and technical blog for Devan McGeer (SRE). Deployed to GitHub Pages at mcgeer.dev.
 
-## Why
+## Stack
 
-Personal portfolio at `mcgeer.dev` — Devan McGeer's public SRE presence.
+React 19 · TypeScript 6 · Tailwind CSS 4 · Vite 8 · React Router 7 · pnpm 10 · Node 22
 
-## What
+## Commands
+
+```sh
+mise run dev        # dev server on localhost:5173
+mise run build      # full production build (content → sitemap → bundle → 404.html)
+mise run lint       # ESLint — zero output on success
+mise run check      # tsc --noEmit — zero output on success
+mise run format     # Prettier
+```
+
+## Architecture
 
 | Path | Purpose |
 |---|---|
-| `static-build/` | **Deploy target** — hand-written HTML/CSS, zero JS, zero build step |
-| `src/` | React/Vite source — being phased out, do not add features here |
-| `.github/workflows/deploy.yml` | Uploads `static-build/` to GitHub Pages on push to main |
-| `.github/workflows/ci.yml` | Lint + type-check on PR (validates remaining React source) |
+| `src/` | React app (components, pages, types) |
+| `content/blogs/*.md` | Blog post source (Markdown) |
+| `public/content/posts.json` | Generated blog index — do not edit directly |
+| `scripts/build-content.ts` | Parses `content/blogs/` → `public/content/posts.json` |
+| `scripts/generate-sitemap.ts` | Generates `dist/sitemap.xml` post-build |
+| `static-build/` | Pre-built static assets (fonts, resume) |
+| `dist/404.html` | Copy of `index.html` — enables SPA routing on GitHub Pages |
 
-## How
+## Key Patterns
 
-**VCS is jj, not git.**
-- New change: `jj new`
-- Describe: `jj desc -m "type(scope): subject"`
-- Move bookmark and push: `jj bookmark set <name> && jj git push --bookmark <name>`
+- **Blog content:** Edit Markdown in `content/blogs/`; `build-content.ts` derives the JSON index.
+- **Routing:** React Router SPA; `dist/404.html = dist/index.html` handles GitHub Pages 404 redirects.
+- **CSP:** `%VITE_CSP%` placeholder in `index.html` is substituted at build time via Vite.
+- **Fonts:** Preloaded with SRI hashes in `index.html`; update hashes if fonts change.
 
-**Commits:** Conventional format — `type(scope): imperative subject`, body explains why.
+## CI/CD
 
-**Format before committing:** `pnpm format` (Prettier — tabs, singleQuote, semi:false, printWidth:100).
+- `ci.yml` — lint + type check on every PR
+- `deploy.yml` — builds and deploys to GitHub Pages on push to `main`
 
-**CI:** `pnpm lint && pnpm check` — ESLint + TypeScript, must be clean on PR.
+## Authority
 
-**Static site has no build step.** `static-build/` is deployed as-is. All asset paths are absolute (`/style.css`, `/fonts/*.woff2`, `/assets/`).
+Global persona, tutoring, and SRE calibration live in `~/.claude/CLAUDE.md`. This file is local HOW-TO only.
