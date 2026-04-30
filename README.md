@@ -1,43 +1,40 @@
-
 [![CI](https://github.com/McGeerDev/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/McGeerDev/portfolio/actions/workflows/ci.yml)
 
 # mcgeer.dev &mdash; Devan McGeer
 
-Source for [mcgeer.dev](https://mcgeer.dev/) — a personal portfolio and SRE resume site.
+Source for [mcgeer.dev](https://mcgeer.dev/) &mdash; personal portfolio and SRE résumé site.
 
 ## Stack
 
-React 19 · TypeScript · Tailwind CSS v4 · Vite · pnpm · Node 22. Deployed to GitHub Pages.
+Hand-written HTML + CSS. No JavaScript, no build step, no dependencies. Deployed to GitHub Pages.
 
 ## Project Structure
 
-- `src/` &mdash; React app. Entry point: `src/main.tsx`.
-- `content/blogs/` &mdash; Markdown blog posts; compiled to `public/content/posts.json` at build time.
-- `dist/` &mdash; Vite output (`outDir` in `vite.config.ts`). `dist/404.html` mirrors `index.html` for GitHub Pages SPA routing.
-- `static-build/` &mdash; Pre-built static assets (fonts, resume).
-- `.github/workflows/deploy.yml` &mdash; Builds and deploys `dist/` to Pages on push to `main`.
-- `.github/workflows/ci.yml` &mdash; Lint + type-check on pull requests.
+- `index.html` &mdash; home page
+- `404.html` &mdash; GitHub Pages 404 fallback
+- `style.css` &mdash; all styles, single file
+- `resume/index.html` &mdash; `/resume/` page
+- `favicon.svg`, `og-image.png` &mdash; site icons and social card
+- `robots.txt`, `sitemap.xml` &mdash; crawler directives
+- `CNAME` &mdash; custom domain (`mcgeer.dev`)
+- `fonts/` &mdash; self-hosted `woff2` (Lekton 400/700, Lexend Zetta 400)
+- `assets/` &mdash; résumé PDF and headshot
+- `.impeccable.md` &mdash; brand, users, and design principles
+- `.github/workflows/` &mdash; `ci.yml` and `deploy.yml`
 
-## Development
-
-```sh
-pnpm install       # install dependencies
-pnpm dev           # dev server at http://localhost:5173 (runs build-content first)
-```
-
-## Build & Preview
+## Local preview
 
 ```sh
-pnpm build         # content → sitemap → vite build → dist/
-pnpm preview       # preview the production build locally
+python3 -m http.server 8000
 ```
 
-## Linting & Formatting
+Then open <http://localhost:8000/>.
 
-```sh
-pnpm format        # Prettier
-pnpm lint          # ESLint
-pnpm check         # TypeScript type-check (tsc --noEmit)
-```
+## CI/CD
 
-Run `pnpm format` before committing. CI enforces `pnpm lint` and `pnpm check` on every PR.
+- `ci.yml` &mdash; validates HTML and checks links on pull requests.
+- `deploy.yml` &mdash; publishes to GitHub Pages on push to `main`, with a daily cron rebuild gated on recent commits.
+
+## License
+
+MIT &mdash; see [`LICENSE`](./LICENSE) at the repo root.
