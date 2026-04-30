@@ -7,33 +7,37 @@ Source for [mcgeer.dev](https://mcgeer.dev/) — a personal portfolio and SRE re
 
 ## Stack
 
-Zero-JavaScript static site. Hand-written HTML and a single CSS file, self-hosted fonts, deployed to GitHub Pages. No framework, no build step.
+React 19 · TypeScript · Tailwind CSS v4 · Vite · pnpm · Node 22. Deployed to GitHub Pages.
 
 ## Project Structure
 
-- `static-build/` &mdash; Deploy target. Served as-is to GitHub Pages. Edit HTML/CSS here.
-- `src/` &mdash; Legacy React/Vite source, being removed in a follow-up PR. Do not add features here.
-- `content/blogs/` &mdash; MDX blog posts (not currently wired to the static site).
-- `.github/workflows/deploy.yml` &mdash; Uploads `static-build/` to Pages on push to `main`.
+- `src/` &mdash; React app. Entry point: `src/main.tsx`.
+- `content/blogs/` &mdash; Markdown blog posts; compiled to `public/content/posts.json` at build time.
+- `dist/` &mdash; Vite output (`outDir` in `vite.config.ts`). `dist/404.html` mirrors `index.html` for GitHub Pages SPA routing.
+- `static-build/` &mdash; Pre-built static assets (fonts, resume).
+- `.github/workflows/deploy.yml` &mdash; Builds and deploys `dist/` to Pages on push to `main`.
 - `.github/workflows/ci.yml` &mdash; Lint + type-check on pull requests.
 
-## Local Preview
-
-No build step required. Serve `static-build/` with any static file server:
+## Development
 
 ```sh
-python3 -m http.server 8000 --directory static-build/
+pnpm install       # install dependencies
+pnpm dev           # dev server at http://localhost:5173 (runs build-content first)
 ```
 
-Then open [http://localhost:8000](http://localhost:8000).
+## Build & Preview
+
+```sh
+pnpm build         # content → sitemap → vite build → dist/
+pnpm preview       # preview the production build locally
+```
 
 ## Linting & Formatting
 
 ```sh
-pnpm install       # install tooling deps
-pnpm format        # Prettier (tabs, singleQuote, semi:false, printWidth:100)
+pnpm format        # Prettier
 pnpm lint          # ESLint
-pnpm check         # TypeScript type-check
+pnpm check         # TypeScript type-check (tsc --noEmit)
 ```
 
 Run `pnpm format` before committing. CI enforces `pnpm lint` and `pnpm check` on every PR.
