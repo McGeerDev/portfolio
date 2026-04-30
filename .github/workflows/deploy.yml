@@ -47,6 +47,21 @@ jobs:
                 fonts assets resume \
                 _site/
 
+      - name: Minify staged site
+        if: github.event_name != 'schedule' || steps.check.outputs.has_commits == 'true'
+        env:
+          MINIFY_VERSION: "2.24.13"
+          MINIFY_SHA256: "6cdd5c8c1d605d60f48a2f4a654595235f1fb50f804b107f72f6a6c87240a1bd"
+        run: |
+          set -euo pipefail
+          curl -fsSL -o minify.tar.gz \
+            "https://github.com/tdewolff/minify/releases/download/v${MINIFY_VERSION}/minify_linux_amd64.tar.gz"
+          echo "${MINIFY_SHA256}  minify.tar.gz" | sha256sum -c -
+          tar -xzf minify.tar.gz minify
+          chmod +x minify
+          ./minify --recursive --match='\.(html|css|svg|xml)$' --output _site/ _site/
+          rm -f minify minify.tar.gz
+
       - uses: actions/upload-pages-artifact@v3
         if: github.event_name != 'schedule' || steps.check.outputs.has_commits == 'true'
         with:
