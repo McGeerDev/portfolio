@@ -11,17 +11,18 @@ permissions:
   contents: read
 
 jobs:
-  lint-all:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
+
+      - name: Validate HTML
+        uses: Cyb3r-Jak3/html5validator-action@v7
         with:
-          version: 10
-      - uses: actions/setup-node@v4
+          root: .
+
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
         with:
-          node-version: 22
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm run lint
-      - run: pnpm run check
+          args: --no-progress --exclude-mail '*.html' 'resume/*.html'
+          fail: true
