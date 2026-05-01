@@ -12,12 +12,16 @@
 
 /favicon.svg
   Cache-Control: public, max-age=2592000
+  Vary: Accept-Encoding
 
 /style.css
   Cache-Control: public, max-age=86400
+  Vary: Accept-Encoding
 
 /*.html
   Cache-Control: public, max-age=600, must-revalidate
+  Vary: Accept-Encoding
 
 /
   Cache-Control: public, max-age=600, must-revalidate
+  Vary: Accept-Encoding
