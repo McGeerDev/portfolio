@@ -42,7 +42,7 @@ jobs:
         if: github.event_name != 'schedule' || steps.check.outputs.has_commits == 'true'
         run: |
           mkdir _site
-          cp -r index.html 404.html style.css favicon.svg og-image.png \
+          cp -r index.html 404.html style.css experience-counter.js favicon.svg og-image.png \
                 robots.txt sitemap.xml CNAME _headers \
                 fonts assets resume \
                 _site/
