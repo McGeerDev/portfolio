@@ -18,6 +18,10 @@
   Cache-Control: public, max-age=2592000
   Vary: Accept-Encoding
 
+/experience-counter.js
+  Cache-Control: public, max-age=2592000
+  Vary: Accept-Encoding
+
 /**/*.html
   Cache-Control: public, max-age=0, must-revalidate
   Vary: Accept-Encoding
