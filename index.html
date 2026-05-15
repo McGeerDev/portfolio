@@ -8,16 +8,51 @@
   <meta name="description" content="Site Reliability Engineer with over 5 years of experience in Kubernetes, Terraform, Go, and AWS. Building observability pipelines, automating infrastructure, and improving CI/CD reliability for production systems.">
   <link rel="canonical" href="https://mcgeer.dev/">
   <meta property="og:title" content="Devan McGeer — Site Reliability Engineer">
-  <meta property="og:description" content="SRE portfolio — infrastructure, observability, and automation.">
+  <meta property="og:description" content="Devan McGeer — Site Reliability Engineer based in South Africa. 5+ years experience in Kubernetes, Terraform, AWS, Datadog, and Go. Available for remote work globally.">
   <meta property="og:image" content="https://mcgeer.dev/og-image.png">
   <meta property="og:url" content="https://mcgeer.dev/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="author" content="Devan McGeer">
+  <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="ZA">
+  <meta name="geo.placename" content="South Africa">
+  <meta name="theme-color" content="#f9f8f5">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preload" href="/fonts/lekton-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/lekton-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/lexend-zetta-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Devan McGeer",
+  "jobTitle": "Site Reliability Engineer",
+  "url": "https://mcgeer.dev",
+  "email": "mcgeer.devan@gmail.com",
+  "image": "https://mcgeer.dev/assets/headshot.webp",
+  "sameAs": [
+    "https://github.com/McGeerDev",
+    "https://www.linkedin.com/in/devan-mcgeer/"
+  ],
+  "description": "Site Reliability Engineer with over 5 years of experience in Kubernetes, Terraform, Go, and AWS. Specialising in observability, CI/CD reliability, and infrastructure automation.",
+  "knowsAbout": ["Kubernetes", "Terraform", "AWS", "GCP", "Docker", "Go", "Datadog", "OpenTelemetry", "GitHub Actions", "ArgoCD", "Site Reliability Engineering", "Infrastructure as Code", "Observability"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "ZA"
+  }
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Devan McGeer — Site Reliability Engineer",
+  "url": "https://mcgeer.dev"
+}
+</script>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
@@ -52,10 +87,12 @@
       <hr>
 
       <main id="main">
-        <div class="hero">
+        <section class="hero" id="intro" aria-label="Introduction">
           <h1>Devan McGeer</h1>
-          <p>Site Reliability Engineer</p>
-        </div>
+          <h2 class="hero-subtitle">Site Reliability Engineer</h2>
+          <p class="hero-tagline">Kubernetes · AWS · Terraform · Observability</p>
+          <a href="mailto:mcgeer.devan@gmail.com" class="hero-cta">Get In Touch</a>
+        </section>
 
         <hr>
 
@@ -63,25 +100,28 @@
           <div class="two-col-grid">
 
             <!-- About -->
-            <div>
-              <h2 class="section-heading">ABOUT</h2>
-              <img
-                src="/assets/headshot.webp"
-                srcset="/assets/headshot-1x.webp 144w, /assets/headshot.webp 216w"
-                sizes="144px"
-                alt="Devan McGeer"
-                width="216"
-                height="216"
-                class="headshot"
-                loading="lazy"
-              >
+            <section id="about" aria-labelledby="about-heading">
+              <h2 id="about-heading" class="section-heading">ABOUT</h2>
+              <figure>
+                <img
+                  src="/assets/headshot.webp"
+                  srcset="/assets/headshot-1x.webp 144w, /assets/headshot.webp 216w"
+                  sizes="144px"
+                  alt="Devan McGeer"
+                  width="216"
+                  height="216"
+                  class="headshot"
+                  loading="lazy"
+                >
+                <figcaption class="sr-only">Devan McGeer, Site Reliability Engineer</figcaption>
+              </figure>
               <p class="about-bio">Site Reliability Engineer with <span>5 years and 5 months</span> of experience in platform engineering, infrastructure automation, and full-stack development. I build and operate production Kubernetes clusters, define SLOs and SLIs, and design observability pipelines with Datadog and OpenTelemetry. Day-to-day I write Go and Terraform to automate infrastructure provisioning, improve CI/CD reliability, and reduce operational toil. Currently owning infrastructure reliability at DIDx on AWS.</p>
               <p class="about-avail">Available for remote work globally</p>
-            </div>
+            </section>
 
             <!-- Skills -->
-            <div>
-              <h2 class="section-heading skills-heading">SKILLS</h2>
+            <section id="skills" aria-labelledby="skills-heading">
+              <h2 id="skills-heading" class="section-heading skills-heading">SKILLS</h2>
               <div class="skill-groups">
 
                 <div>
@@ -139,10 +179,26 @@
                 </div>
 
               </div>
-            </div>
+            </section>
 
           </div>
         </div>
+
+        <hr>
+
+        <section id="expertise" aria-labelledby="expertise-heading" class="expertise-section">
+          <h2 id="expertise-heading">WHAT I DO</h2>
+          <p>I specialise in building and operating production-grade Kubernetes platforms on AWS and GCP. My focus is on reliability — defining SLOs and SLIs, implementing error budgets, and building the observability tooling that makes on-call sustainable.</p>
+          <p>I automate everything I can with Terraform and Go, from infrastructure provisioning to CI/CD pipelines with GitHub Actions and ArgoCD. I treat toil reduction as a core deliverable, not an afterthought.</p>
+          <p>Currently open to senior SRE, platform engineering, and DevOps roles — remote-first, globally.</p>
+        </section>
+
+        <hr>
+
+        <section id="contact" aria-labelledby="contact-heading" class="contact-section">
+          <h2 id="contact-heading">GET IN TOUCH</h2>
+          <p>Available for remote SRE and platform engineering roles globally. Reach me at <a href="mailto:mcgeer.devan@gmail.com">mcgeer.devan@gmail.com</a> or connect on <a href="https://www.linkedin.com/in/devan-mcgeer/" rel="noopener noreferrer" target="_blank">LinkedIn</a>.</p>
+        </section>
       </main>
 
       <footer class="site-footer">
