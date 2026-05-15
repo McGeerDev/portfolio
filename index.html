@@ -65,7 +65,9 @@
           <a href="/" class="nav-logo">DM</a>
           <div class="nav-links">
             <a href="/" class="nav-link active">HOME</a>
+            <a href="/projects/" class="nav-link">PROJECTS</a>
             <a href="/resume/" class="nav-link">RESUME</a>
+            <a href="/blog/" class="nav-link">BLOG</a>
           </div>
         </nav>
         <!-- Mobile nav -->
@@ -78,7 +80,9 @@
             </summary>
             <nav class="nav-mobile-menu" aria-label="Main navigation">
               <a href="/" class="nav-mobile-link active">HOME</a>
+              <a href="/projects/" class="nav-mobile-link">PROJECTS</a>
               <a href="/resume/" class="nav-mobile-link">RESUME</a>
+              <a href="/blog/" class="nav-mobile-link">BLOG</a>
             </nav>
           </details>
         </div>
@@ -87,15 +91,42 @@
       <hr>
 
       <main id="main">
-        <section class="hero" id="intro" aria-label="Introduction">
-          <h1>Devan McGeer</h1>
-          <h2 class="hero-subtitle">Site Reliability Engineer</h2>
-          <p class="hero-tagline">Kubernetes · AWS · Terraform · Observability</p>
-          <a href="mailto:mcgeer.devan@gmail.com" class="hero-cta">Get In Touch</a>
+
+        <!-- Hero -->
+        <section class="hero hero-layout" id="intro" aria-label="Introduction">
+          <div class="hero-content-grid">
+            <div class="hero-left">
+              <h1>Devan McGeer</h1>
+              <span class="avail-badge">&#x25cf; Available — Remote</span>
+              <h2 class="hero-subtitle">Site Reliability Engineer</h2>
+              <p class="hero-tagline">Kubernetes · AWS · Terraform · Observability</p>
+              <p class="hero-stats">5+ yrs experience&nbsp;·&nbsp;99.9% uptime focus&nbsp;·&nbsp;Remote-first</p>
+              <div class="hero-actions">
+                <a href="mailto:mcgeer.devan@gmail.com" class="hero-cta">Get In Touch</a>
+                <a href="/projects/" class="hero-cta hero-cta--secondary">View My Work</a>
+                <a href="https://github.com/McGeerDev" target="_blank" rel="noopener noreferrer" class="hero-cta hero-cta--ghost">GitHub &#8594;</a>
+              </div>
+            </div>
+            <div class="hero-right">
+              <div class="hero-stack-panel">
+                <p class="hero-stack-label">CORE STACK</p>
+                <div class="hero-stack-chips">
+                  <span class="pill">Kubernetes</span>
+                  <span class="pill">Terraform</span>
+                  <span class="pill">AWS</span>
+                  <span class="pill">Datadog</span>
+                  <span class="pill">Go</span>
+                  <span class="pill">GitHub Actions</span>
+                  <span class="pill">ArgoCD</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         <hr>
 
+        <!-- Home Content: About + Skills -->
         <div class="home-content">
           <div class="two-col-grid">
 
@@ -115,8 +146,7 @@
                 >
                 <figcaption class="sr-only">Devan McGeer, Site Reliability Engineer</figcaption>
               </figure>
-              <p class="about-bio">Site Reliability Engineer with <span>5 years and 5 months</span> of experience in platform engineering, infrastructure automation, and full-stack development. I build and operate production Kubernetes clusters, define SLOs and SLIs, and design observability pipelines with Datadog and OpenTelemetry. Day-to-day I write Go and Terraform to automate infrastructure provisioning, improve CI/CD reliability, and reduce operational toil. Currently owning infrastructure reliability at DIDx on AWS.</p>
-              <p class="about-avail">Available for remote work globally</p>
+              <p class="about-bio">Site Reliability Engineer with 5 years and 5 months of experience building and operating production Kubernetes clusters, defining SLOs and SLIs, and designing observability pipelines with Datadog and OpenTelemetry. I write Go and Terraform to automate infrastructure provisioning and improve CI/CD reliability. I treat toil reduction as a core deliverable, not an afterthought — measuring success against error budgets, not gut feelings.</p>
             </section>
 
             <!-- Skills -->
@@ -186,18 +216,66 @@
 
         <hr>
 
-        <section id="expertise" aria-labelledby="expertise-heading" class="expertise-section">
-          <h2 id="expertise-heading">WHAT I DO</h2>
-          <p>I specialise in building and operating production-grade Kubernetes platforms on AWS and GCP. My focus is on reliability — defining SLOs and SLIs, implementing error budgets, and building the observability tooling that makes on-call sustainable.</p>
-          <p>I automate everything I can with Terraform and Go, from infrastructure provisioning to CI/CD pipelines with GitHub Actions and ArgoCD. I treat toil reduction as a core deliverable, not an afterthought.</p>
-          <p>Currently open to senior SRE, platform engineering, and DevOps roles — remote-first, globally.</p>
+        <!-- Selected Work -->
+        <section id="selected-work" aria-labelledby="selected-work-heading" class="projects-teaser-section">
+          <h2 id="selected-work-heading" class="section-heading">SELECTED WORK</h2>
+          <ul class="projects-teaser-list">
+            <li class="projects-teaser-item">
+              <a href="/projects/" class="projects-teaser-title">Kubernetes Observability Platform</a>
+              <p class="projects-teaser-desc">SLO/SLI instrumentation and Datadog pipeline for a production Kubernetes cluster.</p>
+              <div class="projects-teaser-chips">
+                <span class="pill">Kubernetes</span>
+                <span class="pill">Datadog</span>
+                <span class="pill">Terraform</span>
+              </div>
+            </li>
+            <li class="projects-teaser-item">
+              <a href="/projects/" class="projects-teaser-title">Zero-Downtime Deployment Pipeline</a>
+              <p class="projects-teaser-desc">GitOps CI/CD with ArgoCD and GitHub Actions eliminating deploy downtime.</p>
+              <div class="projects-teaser-chips">
+                <span class="pill">GitHub Actions</span>
+                <span class="pill">ArgoCD</span>
+                <span class="pill">Kubernetes</span>
+              </div>
+            </li>
+            <li class="projects-teaser-item">
+              <a href="/projects/" class="projects-teaser-title">Infrastructure Automation Library</a>
+              <p class="projects-teaser-desc">Reusable Terraform module library for AWS, Go tooling for cluster ops.</p>
+              <div class="projects-teaser-chips">
+                <span class="pill">Go</span>
+                <span class="pill">Terraform</span>
+                <span class="pill">AWS</span>
+              </div>
+            </li>
+          </ul>
+          <a href="/projects/" class="projects-view-all">View all projects &#8594;</a>
         </section>
 
         <hr>
 
+        <!-- Writing Teaser -->
+        <section id="writing-teaser" aria-labelledby="writing-teaser-heading" class="writing-teaser-section">
+          <h2 id="writing-teaser-heading" class="section-heading">WRITING</h2>
+          <ul class="writing-teaser-list">
+            <li class="writing-teaser-item">
+              <a href="/blog/slos-at-a-startup/" class="writing-teaser-title">[TODO: Post title — e.g. How I Implemented SLOs at a Startup from Scratch]</a>
+              <p class="writing-teaser-meta">[TODO: Month Year]</p>
+            </li>
+            <li class="writing-teaser-item">
+              <a href="/blog/kubernetes-on-aws-lessons/" class="writing-teaser-title">[TODO: Post title — e.g. Lessons from Running Kubernetes on AWS]</a>
+              <p class="writing-teaser-meta">[TODO: Month Year]</p>
+            </li>
+          </ul>
+          <a href="/blog/" class="writing-view-all">Read all posts &#8594;</a>
+        </section>
+
+        <hr>
+
+        <!-- Contact -->
         <section id="contact" aria-labelledby="contact-heading" class="contact-section">
           <h2 id="contact-heading">GET IN TOUCH</h2>
-          <p>Available for remote SRE and platform engineering roles globally. Reach me at <a href="mailto:mcgeer.devan@gmail.com">mcgeer.devan@gmail.com</a> or connect on <a href="https://www.linkedin.com/in/devan-mcgeer/" rel="noopener noreferrer" target="_blank">LinkedIn</a>.</p>
+          <p>Available for remote SRE and platform engineering roles globally. Reach me at <a href="mailto:mcgeer.devan@gmail.com">mcgeer.devan@gmail.com</a>, connect on <a href="https://www.linkedin.com/in/devan-mcgeer/" rel="noopener noreferrer" target="_blank">LinkedIn</a>, or view my code on <a href="https://github.com/McGeerDev" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+          <p class="contact-location">Based in South Africa (SAST, UTC+2) &mdash; available for calls globally.</p>
         </section>
       </main>
 
