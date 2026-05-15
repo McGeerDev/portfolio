@@ -13,11 +13,84 @@
   <meta property="og:url" content="https://mcgeer.dev/resume/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="author" content="Devan McGeer">
+  <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="ZA">
+  <meta name="geo.placename" content="South Africa">
+  <meta name="theme-color" content="#f9f8f5">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preload" href="/fonts/lekton-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/lekton-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/lexend-zetta-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Devan McGeer",
+    "jobTitle": "Site Reliability Engineer",
+    "url": "https://mcgeer.dev",
+    "email": "mcgeer.devan@gmail.com",
+    "image": "https://mcgeer.dev/assets/headshot.webp",
+    "sameAs": [
+      "https://github.com/McGeerDev",
+      "https://www.linkedin.com/in/devan-mcgeer/"
+    ],
+    "hasOccupation": [
+      {
+        "@type": "Role",
+        "roleName": "Site Reliability Engineer",
+        "startDate": "2025-12",
+        "description": "Own infrastructure reliability for a global DID number marketplace. Build observability with Datadog, manage Kubernetes clusters, and automate deployment pipelines.",
+        "worksFor": { "@type": "Organization", "name": "DIDx", "url": "https://www.didx.co.za" }
+      },
+      {
+        "@type": "Role",
+        "roleName": "Site Reliability Engineer",
+        "startDate": "2025-04",
+        "endDate": "2025-12",
+        "description": "Introduced SRE practices. Built CI/CD pipelines, implemented monitoring with Datadog, reduced deploy times by automating toil.",
+        "worksFor": { "@type": "Organization", "name": "Mesh.trade", "url": "https://mesh.trade" }
+      },
+      {
+        "@type": "Role",
+        "roleName": "Software Engineer",
+        "startDate": "2024-04",
+        "endDate": "2025-04",
+        "description": "Backend services in Go for a regulated digital asset exchange. gRPC, NATS messaging, MongoDB.",
+        "worksFor": { "@type": "Organization", "name": "Mesh.trade", "url": "https://mesh.trade" }
+      },
+      {
+        "@type": "Role",
+        "roleName": "Systems Developer",
+        "startDate": "2022-12",
+        "endDate": "2024-04",
+        "description": "Internal tools for an asset management firm. Automated reporting workflows, integrated third-party data feeds.",
+        "worksFor": { "@type": "Organization", "name": "Rezco", "url": "https://www.rezco.co.za" }
+      },
+      {
+        "@type": "Role",
+        "roleName": "Software Developer",
+        "startDate": "2021-08",
+        "endDate": "2022-11",
+        "description": "Full-stack development on energy management software. Svelte frontend, backend APIs, data pipeline for utility meter analytics.",
+        "worksFor": { "@type": "Organization", "name": "zenAptix", "url": "https://www.zenaptix.com" }
+      },
+      {
+        "@type": "Role",
+        "roleName": "Junior Web Developer",
+        "startDate": "2020-12",
+        "endDate": "2021-08",
+        "description": "Web applications for clients using React and Node.js.",
+        "worksFor": { "@type": "Organization", "name": "Ninety10 Software Solutions", "url": "https://www.ninety10.co.za" }
+      }
+    ]
+  }
+}
+</script>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
@@ -68,7 +141,7 @@
           <!-- DIDx -->
           <div class="experience-entry">
             <div class="role">
-              <p class="role-date">Dec 2025 – Present</p>
+              <p class="role-date"><time datetime="2025-12">Dec 2025</time> – <time datetime="2026-05">Present</time></p>
               <div>
                 <a href="https://www.didx.co.za" target="_blank" rel="noopener noreferrer" class="company-link">DIDx</a>
                 <p class="role-title first">Site Reliability Engineer</p>
@@ -81,7 +154,7 @@
           <!-- Mesh.trade -->
           <div class="experience-entry">
             <div class="role">
-              <p class="role-date">Apr 2025 – Dec 2025</p>
+              <p class="role-date"><time datetime="2025-04">Apr 2025</time> – <time datetime="2025-12">Dec 2025</time></p>
               <div>
                 <a href="https://mesh.trade" target="_blank" rel="noopener noreferrer" class="company-link">Mesh.trade</a>
                 <p class="role-title first">Site Reliability Engineer</p>
@@ -90,7 +163,7 @@
               </div>
             </div>
             <div class="role">
-              <p class="role-date">Apr 2024 – Apr 2025</p>
+              <p class="role-date"><time datetime="2024-04">Apr 2024</time> – <time datetime="2025-04">Apr 2025</time></p>
               <div>
                 <p class="role-title">Software Engineer</p>
                 <p class="role-location">Gauteng, South Africa</p>
@@ -102,7 +175,7 @@
           <!-- Rezco -->
           <div class="experience-entry">
             <div class="role">
-              <p class="role-date">Dec 2022 – Apr 2024</p>
+              <p class="role-date"><time datetime="2022-12">Dec 2022</time> – <time datetime="2024-04">Apr 2024</time></p>
               <div>
                 <a href="https://www.rezco.co.za" target="_blank" rel="noopener noreferrer" class="company-link">Rezco</a>
                 <p class="role-title first">Systems Developer</p>
@@ -115,7 +188,7 @@
           <!-- zenAptix -->
           <div class="experience-entry">
             <div class="role">
-              <p class="role-date">Aug 2021 – Nov 2022</p>
+              <p class="role-date"><time datetime="2021-08">Aug 2021</time> – <time datetime="2022-11">Nov 2022</time></p>
               <div>
                 <a href="https://www.zenaptix.com" target="_blank" rel="noopener noreferrer" class="company-link">zenAptix</a>
                 <p class="role-title first">Software Developer</p>
@@ -128,7 +201,7 @@
           <!-- Ninety10 -->
           <div class="experience-entry">
             <div class="role">
-              <p class="role-date">Dec 2020 – Aug 2021</p>
+              <p class="role-date"><time datetime="2020-12">Dec 2020</time> – <time datetime="2021-08">Aug 2021</time></p>
               <div>
                 <a href="https://www.ninety10.co.za" target="_blank" rel="noopener noreferrer" class="company-link">Ninety10 Software Solutions</a>
                 <p class="role-title first">Junior Web Developer</p>

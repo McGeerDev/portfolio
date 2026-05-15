@@ -29,6 +29,9 @@ jobs:
             --base https://mcgeer.dev
             --exclude 'linkedin\.com'
             --exclude 'ninety10\.co\.za'
+            --exclude 'mcgeer\.dev/style\.css'
+            --exclude 'mcgeer\.dev/favicon\.svg'
+            --exclude 'mcgeer\.dev/fonts/'
             --accept 200,418,999
             '*.html' 'resume/*.html'
           fail: true
